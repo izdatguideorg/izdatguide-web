@@ -6,7 +6,6 @@ import { draftMode } from 'next/headers';
 import React from 'react';
 
 import { AdminBar } from '@/components/AdminBar';
-import { Footer } from '@/globals/Footer/Component';
 import { Header } from '@/globals/Header/Component';
 import { Providers } from '@/providers';
 import { InitTheme } from '@/providers/Theme/InitTheme';
@@ -46,7 +45,6 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
 
           <Header />
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>

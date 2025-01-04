@@ -20,7 +20,7 @@ const collections: CollectionSlug[] = [
   'form-submissions',
   'search',
 ];
-const globals: GlobalSlug[] = ['header', 'footer'];
+const globals: GlobalSlug[] = ['header'];
 
 // Next.js revalidation errors are normal when seeding the database without a server running
 // i.e. running `yarn seed` locally instead of using the admin UI within an active app
@@ -346,7 +346,7 @@ export const seed = async ({
         ],
       },
     }),
-    payload.updateGlobal({
+    /* payload.updateGlobal({
       slug: 'footer',
       data: {
         navItems: [
@@ -375,7 +375,7 @@ export const seed = async ({
           },
         ],
       },
-    }),
+    }), */
   ]);
 
   payload.logger.info('Seeded database successfully!');
