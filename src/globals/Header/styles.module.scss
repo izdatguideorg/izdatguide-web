@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 50px 90px 3fr 180px;
+  background-color: $accent-color;
+  box-shadow: 20px 0 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navItem_wrapper{
+  padding-left: 30px;
+  padding-top: 20px;
+  display: flex;
+  border-bottom: 1px solid $base-color;
+}
+
+.navItem{
+  //padding-left: 30px;
+  //padding-top: 20px;
+}
+
+.logo_wrapper{
+  // max-height: 150px;
+  padding-top: 0px;
+  align-items: center;
+}
+
+.search_wrapper{
+  max-height: 50px;
+  padding-right: 30px;
+  padding-top: 0px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $base-background-color;
+}
+
+.nets_wrapper{
+  display: grid;
+}
+
+.netItem_wrapper{
+  gap: 15px;
+}
+
+.bookmark_wrapper{
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.navIcon{
+  margin-top: 5px;
+}

@@ -1,24 +1,28 @@
 'use client';
 
-import { SearchIcon } from 'lucide-react';
-import Link from 'next/link';
+import classNames from 'classnames';
 import React from 'react';
 
+import { IconArrow } from '@/components/Icons/IconArrow';
 import { CMSLink } from '@/components/Link';
+import { Typography } from '@/components/ui/typography';
 import type { Header as HeaderType } from '@/payload-types';
+
+import styles from '../styles.module.scss';
 
 export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
   const navItems = data?.navItems || [];
 
   return (
-    <nav>
+    <nav className={styles.nets_wrapper}>
       {navItems.map(({ link }, i) => (
-        <CMSLink key={i} {...link} appearance='link' />
+        <div key={i} className={classNames(styles.navItem_wrapper, styles.netItem_wrapper)}>
+        <Typography className={styles.navItem} tag='h3' variant='title3'>
+          <CMSLink {...link} appearance='link' />
+        </Typography>
+        <IconArrow className={styles.navIcon} />
+        </div>
       ))}
-      <Link href='/search'>
-        <span>Search</span>
-        <SearchIcon />
-      </Link>
     </nav>
   );
 };

@@ -1,6 +1,4 @@
 import classnames from 'classnames';
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import React from 'react';
@@ -9,6 +7,7 @@ import { AdminBar } from '@/components/AdminBar';
 import { Header } from '@/globals/Header/Component';
 import { Providers } from '@/providers';
 import { InitTheme } from '@/providers/Theme/InitTheme';
+import { montserrat, bebasNeue } from '@/styles/fonts';
 import '../../styles/globals.scss';
 import { getServerSideURL } from '@/utilities/getURL';
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph';
@@ -28,7 +27,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <html
       suppressHydrationWarning
-      className={classnames(GeistSans.variable, GeistMono.variable)}
+      className={classnames(montserrat.variable, bebasNeue.variable)}
       lang='en'
     >
       <head>
@@ -42,9 +41,10 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
               preview: isEnabled,
             }}
           />
-
+          <div className='layout_wrapper'>
           <Header />
           {children}
+          </div>
         </Providers>
       </body>
     </html>

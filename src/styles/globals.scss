@@ -1,4 +1,4 @@
-@import 'reset', 'variables';
+@import 'reset', 'variables', 'typography';
 
 :root {
   --background: 0 0% 100%;
@@ -86,7 +86,22 @@ html[data-theme='light'] {
 }
 
 body {
-  font-family: var(--micraDi);
+  font-family: var(--montserrat);
   color: $base-color;
   background-color: $base-background-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.layout_wrapper{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 80px;
 }
