@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
 import React from 'react';
 
+import { Header } from '@/Header/Component';
 import { AdminBar } from '@/components/AdminBar';
-import { Header } from '@/globals/Header/Component';
 import { Providers } from '@/providers';
 import { InitTheme } from '@/providers/Theme/InitTheme';
 import { montserrat, bebasNeue } from '@/styles/fonts';

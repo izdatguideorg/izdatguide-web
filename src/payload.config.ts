@@ -8,12 +8,13 @@ import sharp from 'sharp'; // sharp-import
 
 import { defaultLexical } from '@/fields/defaultLexical';
 
+import { Header } from './Header/config';
 import { Categories } from './collections/Categories';
 import { Media } from './collections/Media';
 import { Pages } from './collections/Pages';
 import { Posts } from './collections/Posts';
+import { Publishers } from './collections/Publishers';
 import { Users } from './collections/Users';
-import { Header } from './globals/Header/config';
 import { plugins } from './plugins';
 import { getServerSideURL } from './utilities/getURL';
 
@@ -64,7 +65,7 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URI || '',
     },
   }),
-  collections: [Pages, Posts, Media, Categories, Users],
+  collections: [Pages, Posts, Publishers, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header],
   plugins: [
