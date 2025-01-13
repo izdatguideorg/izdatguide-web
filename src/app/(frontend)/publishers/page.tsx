@@ -2,7 +2,7 @@ import type { Metadata } from 'next/types';
 import { getPayload } from 'payload';
 import React from 'react';
 
-import { CardPublisher } from '@/components/CardPublisher';
+import { CollectionPublishers } from '@/components/CollectionPublishers';
 import configPromise from '@payload-config';
 
 export const dynamic = 'force-static';
@@ -23,13 +23,7 @@ const Page = async () => {
 
   return (
     <div className=''>
-      <div className=''>
-        <div className=''>
-          <h1>Publishers</h1>
-        </div>
-      </div>
-      <div>{publishers.docs[0].title}</div>
-      <CardPublisher doc={publishers.docs[0]} />
+      <CollectionPublishers publishers={publishers.docs} />
     </div>
   );
 };

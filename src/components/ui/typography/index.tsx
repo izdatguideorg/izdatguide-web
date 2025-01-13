@@ -6,6 +6,7 @@ type Variant =
   | 'title'
   | 'title2'
   | 'title3'
+  | 'title4'
   | 'text';
 
 interface TypographyProps {

@@ -35,7 +35,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     <header {...(theme ? { 'data-theme': theme } : {})}>
       <div className={styles.container}>
         <Link className={classnames(styles.navItem_wrapper, styles.logo_wrapper)} href='/'>
-          <Typography className={styles.navItem} tag='h3' variant='title3'>Гид по независимым издательствам</Typography>
+          <Typography className={styles.navItem} tag='h3' variant='title2'>Гид по независимым издательствам</Typography>
         </Link>
         <Link className={classnames(styles.navItem_wrapper, styles.search_wrapper)} href='/search'>
         <IconSearch />
