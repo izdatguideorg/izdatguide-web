@@ -7,10 +7,10 @@ const NotFound = () => (
   <div className=''>
     <div className=''>
       <h1 style={{ marginBottom: 0 }}>404</h1>
-      <p className=''>This page could not be found.</p>
+      <p className=''>Здесь пока ничего нет</p>
     </div>
     <Button asChild variant='default'>
-      <Link href='/'>Go home</Link>
+      <Link href='/'>Вернуться</Link>
     </Button>
   </div>
 );

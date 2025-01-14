@@ -41,7 +41,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
         <IconSearch />
       </Link>
       <div className={styles.navItem_wrapper}>
-      <Link href='/'>
+      <Link href='/publishers'>
           <Typography className={styles.navItem} tag='h3' variant='title3'>Каталог</Typography>
         </Link>
         </div>
