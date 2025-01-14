@@ -3,11 +3,12 @@ import type { FC, ReactNode } from 'react';
 
 type Tag = 'div' | 'span' | 'h1' | 'h2' | 'h3' | 'p' | 'li';
 type Variant =
-  | 'title'
+  | 'title1'
   | 'title2'
   | 'title3'
   | 'title4'
-  | 'text';
+  | 'text1'
+  | 'text2';
 
 interface TypographyProps {
   tag?: Tag;

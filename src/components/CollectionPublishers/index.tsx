@@ -15,7 +15,7 @@ export const CollectionPublishers: React.FC<Props> = ({ publishers }) => (
           if (typeof result === 'object' && result !== null) {
             return (
               <div key={index} className={styles.card_wrapper}>
-                <CardPublisher showCategories className={styles.card} doc={result} relationTo='publishers' />
+                <CardPublisher className={styles.card} doc={result} relationTo='publishers' />
               </div>
             );
           }

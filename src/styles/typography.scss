@@ -15,7 +15,7 @@
 
 .title1 {
   @extend .title;
-  font-size: 74px;
+  font-size: 3.5rem;
 }
 
 .title2 {
@@ -35,5 +35,10 @@
 
 .text1 {
   @extend .text;
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+.text2 {
+  @extend .text;
+  font-size: .875rem;
 }
